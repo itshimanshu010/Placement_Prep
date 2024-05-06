@@ -49,10 +49,26 @@ int main(){
 
     // other way == iterator////
     //it points to memory address
-    //v = {1,2,3,8,6}
+
+
+    //v = {20,10,40,60,50}
+    // inside the v these are the contiguous memory locations
     //syntax  
     vector<int>::iterator it = v.begin();
+    
     //vector then datatype then double coloan then iterator then ('it' you can named whatever like 'bit'site' etc)
+    //Iterators are used to point at the memory addresses
+    //v.begin mean it point to memory that is 20
+
     
 
+    cout << *(it) << " "; // * => in c++ to access anyting from or in the memory we use *
+    // output of *(it) is 20
+
+
+    // *(v.begin()) => 20    
+    
+    it++; 
+    cout << *(it) << " "; // begin goes to 10 (next memory address)
+    
 }
