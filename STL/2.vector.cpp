@@ -10,11 +10,11 @@ int main(){
 
 
     // For dynamic array where no need to specify size
-    //we use Vector Container to store values like an array does
+    // We use Vector Container to store values like an array does
     vector<int> v; // Empty container created
     
     //Pushback function
-    v.push_back(1);  // 1 will be added to the vector
+    v.push_back(1);  //Here 1 will be added to the vector
 
     //Emplaceback (Similar to pushback) dynamically increases the size and pushes into the back
     //faster than push_back
@@ -31,17 +31,17 @@ int main(){
     
     // Declare with multiple value
     vector<int> v(5,100);
-    //{100,100,100,100,100} size of container 5, with elements 100
+    //{100,100,100,100,100} Size of container 5, with elements 100
 
     vector<int> v(5);
-    //{0,0,0,0,0} or {garbage value,...,...} depends upon compiler
+    //{0,0,0,0,0} or it will store {garbage value,...,...} cause it depends upon compiler
 
     vector<int> v1(5,20);
     //{20,20,20,20,20} 
     
-    //copy one vector into another vector
+    //Copy one vector into another vector
     vector<int> v2(v1);
-    //similar but the copy of v1, v2={20,20,20,20,20}
+    //Similar but the copy of v1, v2={20,20,20,20,20}
 
     
     //Accessing elements in vector
@@ -172,7 +172,9 @@ int main(){
     //erasing entire vector  {10,20,30}
     v.clear(); // {}
 
-    //{1} ->not empty  {}-> empty
+    //In array if there is one element there {1} then it is not empty  
+     //{}->It is empty array
+     
     v.empty();
     
 
