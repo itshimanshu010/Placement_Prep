@@ -1,20 +1,25 @@
 #include<bits/stdc++.h> //this library includes all other library
+#include <utility>
 
 using namespace std; //it helps to not call std everytime 
 
 
-//function 1-void (it will not return anything) 2 - return type function example - int
- void print()
+//There are two types of function 
+//i - void (it will not return anything) ii - return type function example - int
+
+//void function 
+void print()
  {
     cout << "himanshu";
  }
- //void function
+ 
 
+//return type function like int, double etc
  int sum(int a , int b)
  {
-    return a +b;
+    return a + b;
  }
- //return type function like int, double etc
+ 
 
 int main(){
     int a;
@@ -22,37 +27,35 @@ int main(){
     //example without use namespace
     std::cin >> a;
     std::cout << a; 
-    //here we have to use stde everytime when we dont use namespace std;
+    //here we have to use std everytime when we dont use namespace std;
 
-    //example with use namespace
+    //Example of usin namespace std
     cin >> a;
     cout << a;
     //here we dont use std everytime
 
 
     //Now STL 
-    //It is divided into 4 parts : ALgorithm,Containers, Function,Iterators
-
+    // Example of STL parts: Algorithm, Containers, Functions, and Iterators
+   
+    return 0;
 
 }
 
-//pairs: it is part of utility library, it is used to pair of data in data type
-
+//Pair: it is part of utility library, it is used to pair data with data type.
 void explainPair(){
     pair<int, int> p ={1,3};
-    // for accessing 
+    // Accessing the first and second elements of the pair
     cout << p.first << " " <<p.second;
 
-    //storing 3 to more variable using nested
-
+    //Storing 3 to more variable using nested
     pair<int, pair<int,int>> p = {1, {3,4}};
-
     cout << p.first << " " <<p.second.first  << " " <<p.second.second; 
 
-    //declaring array into pair
-    
+    //Declaring array into pair
     pair<int,int>arr[]={{1,2}, {3,5},{4,5}};
 
+    // Accessing the second element of the second pair in the array
     cout << arr[1].second; // 5
  
 }
