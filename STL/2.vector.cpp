@@ -1,43 +1,45 @@
-#include<bits/stdc++.h> 
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
 int main(){
 
-    //storing array
+     // Storing array
     int arr[5] = {1,5,3,4,2};
 
-    //for dynamic array where no need to tell size
-    //We use Vector Container store value like array does
 
-    vector<int> v; //empty contaiber created
-
+    // For dynamic array where no need to specify size
+    //we use Vector Container to store values like an array does
+    vector<int> v; // Empty container created
+    
     //Pushback function
-    v.push_back(1);  // 1 will be go into the v
+    v.push_back(1);  // 1 will be added to the vector
 
-    //Emplaceback (Similar to pushback) dynamically increases the size and push into the bacl
-    //faster than push back
-     v.emplace_back(2);
+    //Emplaceback (Similar to pushback) dynamically increases the size and pushes into the back
+    //faster than push_back
+    v.emplace_back(2);
 
      //vector of pair data type
      vector<pair<int,int>>vec;
 
     //storing data in pair vector
-    vec.push_back({1,2}); // here we need curly braces but in emplace we dont 
+    vec.push_back({1,2}); // // Curly braces needed for initialization here but not in emplace
 
-    vec.emplace_back(1,2); // it automatically understand that it is for pair vector
+    vec.emplace_back(1,2);  // It automatically understands that it is for a pair vector
 
-    // declare with multiple value
-
+    
+    // Declare with multiple value
     vector<int> v(5,100);
     //{100,100,100,100,100} size of container 5, with elements 100
 
-     vector<int> v(5);
-     //{0,0,0,0,0} or {garbage value,...,...} depends upon compiler
+    vector<int> v(5);
+    //{0,0,0,0,0} or {garbage value,...,...} depends upon compiler
 
-     vector<int> v1(5,20);
-     //{20,20,20,20,20} 
+    vector<int> v1(5,20);
+    //{20,20,20,20,20} 
     
-    //cop one vector into another vector
+    //copy one vector into another vector
     vector<int> v2(v1);
     //similar but the copy of v1, v2={20,20,20,20,20}
 
@@ -46,44 +48,49 @@ int main(){
     //v = {20,10,50,60,70}
     //v[1]=10,v[2]=50 same as array
     //or another way =  v.at(0);
+    cout << v[0] << " " << v.at(0); // Same as array: v[0]=20, v.at(0)=20
 
-    // other way == iterator////
-    //it points to memory address
-
+    // other way is " iterator "
+    // Iterators are used to point at memory addresses
+    
+    
 
     //v = {20,10,40,60,50}
-    // inside the v these are the contiguous memory locations
-    //syntax  
+    // inside the v,all are the contiguous memory locations
+    
+    //syntax of iterator
     vector<int>::iterator it = v.begin();
     
-    //vector then datatype then double coloan then iterator then ('it' you can named whatever like 'bit'site' etc)
+    //in words vector then datatype then double colon then iterator then ('it' you can named whatever like 'bit','site'. etc)
     //Iterators are used to point at the memory addresses
-    //v.begin mean it point to memory that is 20
-
-    
+    //v.begin mean it point to memory that is 20 i.e, Iterator pointing to the beginning of the vector
+ 
 
     cout << *(it) << " "; // * => in c++ to access anyting from or in the memory we use *
+    // Dereferencing the iterator to get the value at that memory address
     // output of *(it) is 20
 
 
     // *(v.begin()) => 20    
     
-    it++; 
+    it++;  // Moving the iterator to the next element
     cout << *(it) << " "; // begin goes to 10 (next memory address)
     
 
-    it = it + 2;
-     cout << *(it) << " "; // begin goes to 60 (next memory address)
+    it = it + 2; // Moving the iterator to the second element from the current position
+    cout << *(it) << " "; // begin goes to 60 (next memory address)
 
 
-    vector<int>::iterator it = v.end(); // point after the 50 that right after the 50 which last element i.e v.end will not point to 50 but after the 50
-    // and for 50 you have to to do it-- sp that it will iterate on 50
+    vector<int>::iterator it = v.end(); // point after the 50 that is right after the 50 which is last element 
+    //i.e v.end will not point to 50 but after the 50
+    // and for 50 you have to to do it-- so that 'it' will iterate on 50
     
     vector<int>::iterator it = v.rend(); // reverse end means reversing the element i.e {20,10,40,60,50} to {50,60,40,10,20}
     //right after end
     
-    vector<int>::iterator it = v.rbegin(); // reverse and iterator pointer is right after the end
-    // if in rbegin() iterat on {20,10,40,60,50} after 50 but after  it++ the pointer move to 60
+    vector<int>::iterator it = v.rbegin(); // iterator pointer is on right after the end
+    // if rbegin() iterate on {20,10,40,60,50} which mean it will after 50
+    //but after when we do it++, the pointer move to 60
 
 
     //how to print 
@@ -93,29 +100,32 @@ int main(){
     //  v.back() ->used to fetch the last element of a vector container.
     cout << v.back() << " "; //50
 
-
-
-
-
     printing the vector
     // by the use of for loop from 0 to n
+    
     // other way
     for(vector<int>::iterator it = v.begin(); it != v.end(); it++){
         cout << *(it) << " "; //20,10,40,60,50
     }
 
     //other way which shortcut
+    
     //use auto
     //auto= (auto assignation) it automatically define assign into vector iterator, and interger datatype
-    // auto it = 5 it understanmd it is integer, it = "str" it understand it is string
+    // auto it = 5 it understand it is integer, it = "str" it understand it is string
     for(auto it = v.begin(); it != v.end();i++){
         cout << *(it) << " ";
     }
 
 
-    //other way using foreach loop
+    //other way by using foreach loop
     for(auto it : v){ // auto it : v mean auto it on v
                 cout << *(it) << " ";
+    }
+    
+    // Other way using auto and foreach loop
+    for (auto element : v) {
+        cout << element << " "; // Prints each element in the vector
     }
 
     //deletion in vector
@@ -124,12 +134,13 @@ int main(){
    // v.erase(iterator-location of the address)
 
    // example {20,10,40,60,50}
-    v.erase(v.begin() + 1); //point towards 10 , output {20,40,60,50}
+    v.erase(v.begin() + 1); // Erase element at index i.e, point towards 10 , output {20,40,60,50}
 
     //now deleting multiple consecutive element between the iterators also start point of iterator will delete but not last point  [...)
     //.erase(st point,end point)
     // example {20,10,40,60,50}
-    v.erase(v.begin() + 2, v.begin() + 4);  //point towards 40 and 50, so starting point 40 and 60 will remove and end point 50 will not, output {20,10,50}  
+    v.erase(v.begin() + 2, v.begin() + 4); //// Erase elements from index 2 to 4 (exclusive)
+    //point towards 40 and 50, so starting point 40 and 60 will remove and end point 50 will not, output {20,10,50}  
 
 
     //Insert Function
