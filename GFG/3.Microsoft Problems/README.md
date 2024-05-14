@@ -1,0 +1,2 @@
+# Microsoft Problems GFG
+<a href="https://www.geeksforgeeks.org/explore?page=1&company=Microsoft&sortBy=submissions&itm_source=geeksforgeeks&itm_medium=main_header&itm_campaign=practice_header">Link</a>
