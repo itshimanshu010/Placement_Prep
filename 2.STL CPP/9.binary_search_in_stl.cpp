@@ -6,10 +6,11 @@
 
 A[] = {1,4,5,8,9}
 
-bool res = binary_search(a, a+n, 3);  //return false
-// 3 is finding element in he array
-//a means the iterator on the first element 
-//a+n means the iterator on the after last element
+bool res = binary_search(a, a+n, 3);  
+//return false
+// 3 is the finding element in the array
+//a means it points on the first iterator that is on the first element 
+//a+n means the iterator point on the ending postion that is  on the after last element
 
 bool res = binary_search(a, a+n, 3); //return true or res = true;
 //here rather than writing such big code just use this stl and got the answer
