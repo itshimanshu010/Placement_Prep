@@ -157,14 +157,14 @@ int main() {
         // answer is -1
 
        // x = 0// it goes to left to first element which is out of bound
-//so the result is -1 
+        //so the result is -1 
 
 
         /*
         Find The smallest number greater than X in a sorted array
         If it does not exits, print -1.
         */
-        Q[] = {1,4,4,4,4,9,9,10,11};
+        int Q[] = {1,4,4,4,4,9,9,10,11};
 
         X = 4;
         ind = upper_bound(Q, Q + n, X) - Q;
@@ -182,7 +182,7 @@ int main() {
         // X = 2   // Output: 4
         // X = 1   // Output: 4
          // X = 11  // Output: -1 (violates ind < n)
-         
+
         return 0;
 }
 
