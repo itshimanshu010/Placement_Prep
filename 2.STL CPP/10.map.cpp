@@ -108,3 +108,19 @@ int main(){
 
 
 }
+
+
+void multiMap(){
+    //Everything same as map, only it can store multiple or duplicate keys
+    // You cannot access elements by mp[key] because it can have multiple values for the same key
+    // It also stores elements in sorted order by key
+}
+
+
+void UnorderedMap(){
+    
+    // It has unique keys but
+    // Keys are not stored in any particular order (they are randomized)
+    // Average time complexity for operations is O(1)
+    // Worst case time complexity is O(N) due to hash collisions
+}
