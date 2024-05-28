@@ -1,5 +1,5 @@
 // Map stores key-value pairs in sorted order by keys
-//Allow Duplicate value but has unique keys
+//Allow Duplicate values but has unique keys
 //Both key and value can be data type 
 //Map stores unique key in sorted order
 // Generic operations are insert, find, erase

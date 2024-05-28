@@ -12,8 +12,11 @@ int main() {
     //For Vector
     sort(vec.begin(), vec.end());
 
-    //For Non Vector
-    sort(a,a+n);
+    // Sorting an array
+    int a[]= {1,5,3,2};
+    int n = sizeof(a) / sizeof(a[0]);
+    sort(a, a + n);
+
     //sort(a,a+n) a is first position (Starting Iterator) 
     //a+n is last itrator
 
@@ -23,11 +26,10 @@ int main() {
     //{1.2.3.5}
 
     //Sorting in Descending
-    sort(a, a+n, greater<int>);
-    //starting itartor, last iterator, comparator(it automatically sort in the descendign order)
+    sort(a, a+n, greater<int>());
+    //starting itartor, last iterator, greater is comparator (it automatically sort in the descendign order)
 
     // Sorting in Different Ways
-
     //Example
     pair<int,int> a[] = {{1,2},{2,1},{4,1}};
     //Question Statement
@@ -43,23 +45,24 @@ int main() {
 
 
     //__builtin_popcount
-    //another function built in popcount it uses to count only bits
+    // Counting the number of set bits in a number
 
     int num= 7;
-    int count = __builtin_popcount();
+    int count = __builtin_popcount(num); //output:3
     //this function or method helps to find the set of bits
     //so for 7 the bit representation is 000 so set of bits is 3
     
     int num= 6;
-    int count = __builtin_popcount();
+    int count = __builtin_popcount(num);
     //6  =  110 so set of bits are 2
     
     //if the number is long 
-    int num= 613564564564564564;
-    int count = __builtin_popcountll();  //we use builtin_popcountll that is long long
+    long long big_num= 613564564564564564;
+    int count = __builtin_popcountll(big_num);  //we use builtin_popcountll that is long long
 
 
     //next_permutation
+
     string  s = "123";
 
     do{
@@ -73,10 +76,10 @@ int main() {
     //it gives values till 6 th time after that it goes to false
     //and loop will be stop
 
-    int maxi = *max_element(a,a+n);
+    int maxi = *max_element(a, a + n);
     //it give the greatest element in array
 
-    int man = *man_element(a,a+n);
+    int mini = *min_element(a, a + n);
     //it give the smallest element in array
 
     return 0;
